@@ -12,7 +12,16 @@ body {
 	font-family: 'Khand', sans-serif;
 	font-size: 16px;
     background-color: #08031a;
+    background: url("../images/maxresdefault.jpg") repeat-y;
+    background-position: center;
+    background-size: cover;
+    animation: slide 60s linear infinite;
 }
+
+@keyframes slide{
+    from { background-position: 0 0; }
+    to { background-position: 0 -1670px; }
+  }
 
 .hidden { display: none; }
 
@@ -27,17 +36,13 @@ body {
 }
 
 .jet-area {
-    width: 9%;
-    margin: 13em auto 7em;
+    width: 20vw;
+    margin: 9em auto;
 }
 
 
 .icons-area {
+    width: 8vw;
     margin: 0 auto;
-}
 
-
-.icons-area img {
-    width: 7%;
-    margin: 1em;
 }
