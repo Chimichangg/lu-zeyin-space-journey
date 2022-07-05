@@ -15,12 +15,12 @@ body {
     background: url("../images/maxresdefault.jpg") repeat-y;
     background-position: center;
     background-size: cover;
-    animation: slide 60s linear infinite;
+    animation: slide 40s linear infinite;
 }
 
 @keyframes slide{
     from { background-position: 0 0; }
-    to { background-position: 0 -1670px; }
+    to { background-position: 0 1670px; }
   }
 
 .hidden { display: none; }
@@ -37,12 +37,38 @@ body {
 
 .jet-area {
     width: 20vw;
-    margin: 9em auto;
+    margin: 9em auto 0;
 }
-
 
 .icons-area {
-    width: 8vw;
-    margin: 0 auto;
-
+    display: flex;
+    position: absolute;
+    left: 27.3%;
+    bottom: 4%;
 }
+
+.icons-area img {
+    margin: 0 0.5vw;
+    width: 8vw;
+}
+
+.icons-area img:hover {
+    opacity: 80%;
+}
+
+
+.fire {
+    margin: -80px auto 0 ;
+    width: 1000px;
+    height: 500px;
+    background-image: url(../images/jet-fire-01.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 0%;
+    animation: fire 0.8s steps(9) infinite;
+}
+
+@keyframes fire{
+    from { background-position: 0 0; }
+    to { background-position: 0 -4500px; }
+  }
