@@ -15,6 +15,7 @@ body {
     background: url("../images/maxresdefault.jpg") repeat-y;
     background-position: center;
     background-size: cover;
+    height: 100vh;
 }
 
 .move-bg {
@@ -66,9 +67,9 @@ body {
 
 
 .fire {
-    margin: -130px auto 0 ;
-    width: 1000px;
-    height: 500px;
+    margin: -7vw auto 0 ;
+    width: 50vw;
+    height: 25vw;
     background-image: url(../images/jet-fire-01.svg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -78,6 +79,6 @@ body {
 
 @keyframes fire{
     from { background-position: 0 0; }
-    to { background-position: 0 -4500px; }
+    to { background-position: 0 -225vw; }
   }
 
