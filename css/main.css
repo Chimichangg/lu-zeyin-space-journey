@@ -16,6 +16,8 @@ body {
     background-position: center;
     background-size: cover;
     height: 100vh;
+    width: 100vw;
+    overflow: hidden;
 }
 
 .move-bg {
@@ -42,6 +44,41 @@ body {
 .control-items:hover {
     opacity: 0.8;
 }
+
+.planets img{
+    z-index: -1;
+    position: absolute;
+}
+
+#purple {
+    width: 35vw;
+    top: -100vh;
+    left: -20vw;
+}
+
+#earth {
+    width: 10vw;
+    top: -60vh;
+    left: 60vw;
+}
+
+
+.planetAn {
+    animation: movingPlanet 15s infinite forwards linear;
+}
+
+
+.planetAnLong {
+    animation: movingPlanet 35s infinite forwards linear;
+}
+
+@keyframes movingPlanet {
+    from { top: -110vh;}
+    to {top: 110vh;}
+}
+
+
+
 
 
 .jet-area {

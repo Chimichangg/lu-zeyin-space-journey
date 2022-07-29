@@ -4,7 +4,9 @@
         jetItem = document.querySelectorAll('.jet-area g'),
         playBut = document.querySelector('#play-but'),
         pauseBut = document.querySelector('#pause-but'),
-        allAudio = document.querySelectorAll('audio')
+        allAudio = document.querySelectorAll('audio'),
+        earth = document.querySelector('#earth'),
+        purple = document.querySelector('#purple')
         ;
     
     
@@ -13,15 +15,28 @@
     allAudio.forEach(clip => {clip.volume = 0})
 
     
-    function startStop () {
+   /* function startStop () {
         document.querySelector("#body").classList.toggle("move-bg");
         document.querySelector(".fire").classList.toggle("hidden");
-    }
+    }*/
 
     function start () {
         document.querySelector("#body").classList.add("move-bg");
         document.querySelector(".fire").classList.remove("hidden");
-        allAudio.forEach(clip => {clip.play()})
+        
+        
+        allAudio.forEach(clip => {clip.play()});
+        
+        
+        earth.classList.add('planetAn');
+        purple.classList.add('planetAnLong');
+
+
+        //setInterval(setProperty, 20000);
+
+        setInterval(setLeftShort, 15000);
+        setInterval(setLeftLong, 35000);
+
     }
 
     function stop () {
@@ -74,6 +89,24 @@
 
 
     //jetItem.forEach(item => item.addEventListener('click',hide));
+
+
+    /*function setProperty() {
+        earth.style.left = (`${getRandomBt(-50, 100)}vw`)
+    }*/
+
+    function getRandomBt (min, max) {
+        return Math.random() * (max - min) + min;
+    }
+
+    function setLeftShort () {earth.style.left = (`${getRandomBt(-50, 100)}vw`);}
+
+    function setLeftLong () {purple.style.left = (`${getRandomBt(-50, 100)}vw`);}
+
+    //setInterval(setLeftshort, 15000);
+    //setInterval(setLeftLong, 35000);
+
+
 
 
 
