@@ -4,9 +4,11 @@
         jetItem = document.querySelectorAll('.jet-area g'),
         playBut = document.querySelector('#play-but'),
         pauseBut = document.querySelector('#pause-but'),
+        resetBut = document.querySelector('#reset-but'),
         allAudio = document.querySelectorAll('audio'),
         earth = document.querySelector('#earth'),
-        purple = document.querySelector('#purple')
+        purple = document.querySelector('#purple'),
+        planets = document.querySelectorAll('.planets img')
         ;
     
     
@@ -22,6 +24,7 @@
 
     function start () {
         document.querySelector("#body").classList.add("move-bg");
+        document.querySelector("#body").style.animationPlayState = "running";
         document.querySelector(".fire").classList.remove("hidden");
         
         
@@ -31,19 +34,40 @@
         earth.classList.add('planetAn');
         purple.classList.add('planetAnLong');
 
-
+        planets.forEach(planet => planet.style.animationPlayState = "running");
         //setInterval(setProperty, 20000);
 
-        setInterval(setLeftShort, 15000);
+        setInterval(setLeftShort, 15100);
         setInterval(setLeftLong, 35000);
 
     }
 
     function stop () {
-        document.querySelector("#body").classList.remove("move-bg");
+        //document.querySelector("#body").classList.remove("move-bg");
+        document.querySelector("#body").style.animationPlayState = "paused";
         document.querySelector(".fire").classList.add("hidden");
         allAudio.forEach(clip => {clip.pause()})
+
+        //earth.classList.remove('planetAn');
+        //purple.classList.remove('planetAnLong');
+
+        planets.forEach(planet => planet.style.animationPlayState = "paused");
+
+        setInterval(setLeftShort, 99999999999999);
+        setInterval(setLeftLong, 99999999999999);
     }
+
+    function reset () {
+        location.reload()
+
+    }
+
+
+
+
+
+
+
 
     function allowDrag(event) {
         console.log('started draggin me');
@@ -71,11 +95,16 @@
         } else {currentAudio.volume = 0;
         }
 
-        start()
 	}
 
 
     
+
+
+
+
+
+
 
 
 
@@ -86,6 +115,7 @@
 
     playBut.addEventListener('click',start);
     pauseBut.addEventListener('click',stop);
+    resetBut.addEventListener('click',reset);
 
 
     //jetItem.forEach(item => item.addEventListener('click',hide));
