@@ -90,7 +90,7 @@ body {
 }
 
 #earth {
-    width: 20vw;
+    width: 18vw;
     top: -60vh;
     left: 80vw;
 }
@@ -115,8 +115,8 @@ body {
 
 
 .jet-area {
-    width: 27vw;
-    margin: 14vw auto 0;
+    width: 20vw;
+    margin: 9vw auto 0;
 }
 
 .icons-area {
@@ -137,9 +137,9 @@ body {
 
 
 .fire {
-    margin: -10vw auto 0 ;
-    width: 60vw;
-    height: 30vw;
+    margin: -7vw auto 0 ;
+    width: 50vw;
+    height: 25vw;
     background-image: url(../images/jet-fire-01.svg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -149,7 +149,7 @@ body {
 
 @keyframes fire{
     from { background-position: 0 0; }
-    to { background-position: 0 -270vw; }
+    to { background-position: 0 -225vw; }
   }
 
 
