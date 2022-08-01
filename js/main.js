@@ -40,6 +40,7 @@
         setInterval(setLeftShort, 15100);
         setInterval(setLeftLong, 35000);
 
+        document.querySelector(".lightbox").classList.add("hidden");
     }
 
     function stop () {
